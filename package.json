@@ -1,0 +1,13 @@
+{
+  "name": "basic_search",
+  "main": "server.js",
+  "dependencies": {
+    "express": "4.8.0",
+    "fs-extra": "0.30.0",
+    "util": "0.10.3",
+    "mongoose": "3.8.0",
+    "body-parser": "1.4.3",
+    "method-override": "~2.1.0",
+    "csv-parser": "1.11.0"
+  }
+}

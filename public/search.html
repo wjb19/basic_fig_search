@@ -1,0 +1,41 @@
+<table><tr><td style="vertical-align:top"> 
+
+
+<table>
+<tr><td style="padding-left: 10px;" ><input type="text" class="form-control" required ng-model="sequence_a"></td>
+<td style="padding-left: 10px;" ><input type="text" class="form-control" required ng-model="sequence_b"></td>
+<td style="padding-left: 10px;" ><button type="button" class="btn btn-success" ng-click="search()">Search</button></td>
+</tr>
+</table>
+{{ msg }}
+<br>
+<div ng-if="docs.length>=1">
+
+<br>
+<table style="border-collapse: collapse;" >
+<tr><td
+style="padding-left: 10px; padding-bottom: 10px" 
+>
+<a href='{{ source_url }}'>Link to Source Document</a>
+</td></tr>
+<tr style="padding-top: 10px; padding-bottom: 10px" ng-repeat="doc in docs" >
+<!--	
+<td  style="padding-left: 10px; padding-bottom: 10px" ><img ng-src="{{doc.image}}" style="height:100px;" /></td>
+-->
+	<td>{{doc.data}}</td>
+        <td><button class="btn btn-default" type="button" ng-click="select_file(doc)">Select</button></td>
+</tr>
+</table>
+</div>
+
+</td><td style="vertical-align:top; padding-left: 20px">
+
+<div ng-if="selected_filename.length>=1">
+<table>
+<tr><td>
+<button class="btn btn-default" type="button" ><a ng-href="{{ fileURL }}" download="{{ selected_filename }}">Download</a></button></td></tr>
+</table>
+<br><br>
+<img style="border:2px solid black; width: 600px" ng-src="{{selected_image}}" />
+</td></tr></table>
+</div>
